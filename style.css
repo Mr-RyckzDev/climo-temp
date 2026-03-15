@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  background-image:url("https://picsum.photos/1080/1920?random=1");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.caixa-maior{
+  color: #ffffff;
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  gap:10px;
+  align-items:center;
+}
+
+.caixa-media {
+  padding:10px 15px;
+}
+
+.clima{
+  display:flex;
+  padding: 10px;
+  align-items: center;
+  gap:10px;
+}
+
+.icone-clima{
+  width:40px;
+}
+
+.caixa-menor {
+  padding:5px 15px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.area-pesquisa {
+  color: #ffffff;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+}
+
+.input-buscar {
+  background: rgba(0,0,0,0.7);
+  border: none;
+  outline: none;
+  padding: 10px;
+  border-radius: 20px;
+  color: white;
+  flex: 1;
+}
+
+.buscar {
+  background: rgba(0,0,0,0.7);
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  float: right;
+  
+  transition: 0.2s;
+}
+
+.buscar img{
+  width:18px;
+  height:18px;
+}
+
+.buscar:active{
+  transform: scale(0.9);
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}
+
+.buscar:hover{
+  background: rgba(0,0,0,1);
+}

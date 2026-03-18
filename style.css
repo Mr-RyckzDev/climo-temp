@@ -1,97 +1,209 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Open Sans',sans-serif;
 }
 
-body {
-  height: 100vh;
-  width: 100vw;
-
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  background-image:url("https://picsum.photos/1080/1920?random=1");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+body{
+height:100vh;
+width:100vw;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+background:
+linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+url("img/clima.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
 }
 
 .caixa-maior{
-  color: #ffffff;
-  background: rgba(0,0,0,0.7);
-  padding: 15px;
-  border-radius: 20px;
-  width: 90%;
-  max-width: 400px;
-  gap:10px;
-  align-items:center;
+background:rgba(255,255,255,0.03);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.05);
+padding:20px;
+border-radius:25px;
+width:90%;
+max-width:350px;
+display:flex;
+flex-direction:column;
+gap:15px;
 }
 
-.caixa-media {
-  padding:10px 15px;
+.header{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
 }
 
-.clima{
-  display:flex;
-  padding: 10px;
-  align-items: center;
-  gap:10px;
+.logo-card{
+width:100%;
+padding:15px;
+border-radius:20px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.08);
+display:flex;
+align-items:center;
+gap:12px;
+justify-content:center;
 }
 
-.icone-clima{
-  width:40px;
+.logo-card h1{
+font-size:22px;
+font-weight:700;
+letter-spacing:1px;
 }
 
-.caixa-menor {
-  padding:5px 15px;
-  display: flex;
-  align-items: center;
-  font-size: 12px;
+.logo-img{
+width:35px;
+height:35px;
+object-fit:cover;
+border-radius:10px;
 }
 
-.area-pesquisa {
-  color: #ffffff;
-  display: flex;
-  padding: 10px;
-  align-items: center;
-  gap: 10px;
+.brand-card{
+padding:6px 14px;
+border-radius:20px;
+font-size:12px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.05);
+color:#aaa;
 }
 
-.input-buscar {
-  background: rgba(0,0,0,0.7);
-  border: none;
-  outline: none;
-  padding: 10px;
-  border-radius: 20px;
-  color: white;
-  flex: 1;
+.area-pesquisa{
+display:flex;
+gap:10px;
 }
 
-.buscar {
-  background: rgba(0,0,0,0.7);
-  border: none;
-  outline: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  float: right;
-  
-  transition: 0.2s;
+.input-buscar{
+flex:1;
+padding:12px;
+border-radius:12px;
+border:none;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.05);
+color:white;
+outline:none;
+}
+
+.buscar{
+background:linear-gradient(135deg,#068562,#013f4a);
+border:none;
+border-radius:12px;
+width:45px;
+height:45px;
+cursor:pointer;
+display:flex;
+justify-content:center;
+align-items:center;
+transition:0.2s;
 }
 
 .buscar img{
-  width:18px;
-  height:18px;
-}
-
-.buscar:active{
-  transform: scale(0.9);
-  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+width:18px;
+filter:invert(1);
 }
 
 .buscar:hover{
-  background: rgba(0,0,0,1);
+transform:scale(1.05);
+}
+
+.caixa-media{
+padding:15px;
+background:rgba(255,255,255,0.02);
+border-radius:15px;
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+gap:10px;
+width:100%;
+}
+
+.topo-clima{
+text-align:center;
+}
+
+.hora-local{
+font-size:13px;
+color:#aaa;
+letter-spacing:1px;
+}
+
+.graus{
+font-size:45px;
+font-weight:700;
+background:linear-gradient(135deg,#00c6ff,#0072ff);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.sensacao{
+font-size:14px;
+color:#bbb;
+}
+
+.clima{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.icone-clima{
+width:40px;
+}
+
+.descricao{
+text-transform:capitalize;
+}
+
+.detalhes{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+width:100%;
+}
+
+.item{
+background:rgba(255,255,255,0.03);
+padding:10px;
+border-radius:12px;
+font-size:13px;
+}
+
+.extra{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:5px;
+}
+
+.icon-sun{
+width:20px;
+height:20px;
+object-fit:contain;
+opacity:0.9;
+transition:0.3s;
+border-radius: 25px;
+}
+
+.sun{
+display:flex;
+align-items:center;
+gap:6px;
+font-size:12px;
+color:#ddd;
+background:rgba(255,255,255,0.05);
+padding:6px 10px;
+border-radius:10px;
+}
+
+.sun:hover .icon-sun{
+transform:scale(1.1);
+opacity:1;
 }
